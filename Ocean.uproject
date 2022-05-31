@@ -7,10 +7,6 @@
 		{
 			"Name": "Water",
 			"Enabled": true
-		},
-		{
-			"Name": "SERIALCOM",
-			"Enabled": true
 		}
 	]
 }
