@@ -11,23 +11,15 @@ uint8_t pinPos = 0;
 // константы для энкодера ace128
 uint8_t upos = 0;
 uint8_t oldPos = 255;
-
+/*
 // пины энкодера ems22a
 const int PIN_CS = 53;
 const int PIN_CLOCK = 52;
 const int PIN_DATA = 50;
 const int PIN_FOR_EMS22a = 10;
-
+*/
 // константы для вывода в Serial
 int border = 40;
-
-// Входы для драйвера
-byte ENA = 48;
-byte INA = 31;
-byte INB = 30;
-
-// Запрос от компьютера, содержащий информацию о движении яхты 
-char inChar;
 
 // Представление угла поворота штурвала в байтах
 union {
@@ -49,7 +41,7 @@ void setup() {
       myACE.begin();    
       pinPos = myACE.acePins();          
       oldPos = pinPos;                 
-      
+      /*
       // настраиваем энкодер ems22a
       pinMode(PIN_CS, OUTPUT);
       pinMode(PIN_CLOCK, OUTPUT);
@@ -58,11 +50,7 @@ void setup() {
       digitalWrite(PIN_FOR_EMS22a, HIGH);
       digitalWrite(PIN_CLOCK, HIGH);
       digitalWrite(PIN_CS, LOW);
-
-      // настройка мотора
-      pinMode(ENA, OUTPUT);
-      pinMode(INA, OUTPUT);
-      pinMode(INB, OUTPUT);
+      */
 }
 int penPosition = 0;
 int oldPosition = myACE.upos();
@@ -79,8 +67,9 @@ void loop() {
         penPosition = penPosition + 1;
       }
       oldPosition = upos;
+     /*  
       // получение значений с энкодера ems22a
-     /* digitalWrite(PIN_CS, HIGH);
+      digitalWrite(PIN_CS, HIGH);
       digitalWrite(PIN_CS, LOW);
       int pos_s = 0;
 
@@ -96,13 +85,15 @@ void loop() {
             digitalWrite(PIN_CLOCK, HIGH);
       }
       digitalWrite(PIN_CLOCK, LOW);
-      digitalWrite(PIN_CLOCK, HIGH);
+      digitalWrite(PIN_CLOCK, HIGH);*/
       positionG.f = penPosition;
-      positionS.f = -(pos_s-212)/10; 
-      inChar=Serial.read();
-      if ((inChar == '3') || (inChar == '2') || (inChar == '1')) {
-      Serial.write(positionG.b, 4);
-        Serial.write(positionS.b, 4);
+      //positionS.f = -(pos_s-212)/10; 
+      //inChar=Serial.read();
+      //if ((inChar == '3') || (inChar == '2') || (inChar == '1')) {
+      for(int i = 0; i++; 3){
+        Serial.write(positionG.b, i);
+      }
+       /*  Serial.write(positionS.b, 4);
         // Информация для отладки
         //Serial.println(pos_s);
       }
