@@ -9,7 +9,8 @@ ACE128 myACE(2,3,4,5,6,7,8,9, (uint8_t*)encoderMap_12345678);
 uint8_t pinPos = 0; 
 
 // константы для энкодера ace128
-uint8_t upos = 0;
+byte upos = 0;
+//byte readACE = 0;
 uint8_t oldPos = 255;
 // константы для вывода в Serial
 int border = 40;
@@ -54,6 +55,9 @@ void loop() {
       oldPosition = upos;
     
       positionG.f = penPosition;
-      //Serial.write(positionG.b, 4);
-       Serial.println(oldPosition);
-}
+      //Serial.write(upos);
+      
+      delay(10);
+      //
+      Serial.print(String(upos));
+}//l
