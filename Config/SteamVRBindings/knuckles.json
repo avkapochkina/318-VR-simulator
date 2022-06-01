@@ -358,17 +358,6 @@
 					}
 				},
 				{
-					"mode": "trackpad",
-					"path": "/user/hand/left/input/trackpad",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/VREditor_Left_WorldMovement axis"
-						}
-					}
-				},
-				{
 					"mode": "trigger",
 					"path": "/user/hand/right/input/trigger",
 					"inputs":
@@ -376,6 +365,17 @@
 						"pull":
 						{
 							"output": "/actions/main/in/VREditor_Right_TriggerAxis axis"
+						}
+					}
+				},
+				{
+					"mode": "trackpad",
+					"path": "/user/hand/left/input/trackpad",
+					"inputs":
+					{
+						"touch":
+						{
+							"output": "/actions/main/in/VREditor_Left_WorldMovement axis"
 						}
 					}
 				}

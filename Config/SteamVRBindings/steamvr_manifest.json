@@ -236,14 +236,6 @@
 			"type": "boolean"
 		},
 		{
-			"name": "/actions/main/in/TeleportDirectionUp axis",
-			"type": "vector1"
-		},
-		{
-			"name": "/actions/main/in/TeleportDirectionRight axis",
-			"type": "vector1"
-		},
-		{
 			"name": "/actions/main/in/MotionControllerThumbLeft_Y axis",
 			"type": "vector1"
 		},
@@ -280,11 +272,11 @@
 			"type": "vector1"
 		},
 		{
-			"name": "/actions/main/in/VREditor_Left_WorldMovement axis",
+			"name": "/actions/main/in/VREditor_Right_TriggerAxis axis",
 			"type": "vector1"
 		},
 		{
-			"name": "/actions/main/in/VREditor_Right_TriggerAxis axis",
+			"name": "/actions/main/in/VREditor_Left_WorldMovement axis",
 			"type": "vector1"
 		}
 	],
@@ -550,8 +542,6 @@
 			"/actions/main/in/VREditor_Right_Modifier2": "VREditor_Right_Modifier2",
 			"/actions/main/in/VREditor_Left_WorldMovement": "VREditor_Left_WorldMovement",
 			"/actions/main/in/VREditor_Right_WorldMovement": "VREditor_Right_WorldMovement",
-			"/actions/main/in/TeleportDirectionUp axis": "TeleportDirectionUp",
-			"/actions/main/in/TeleportDirectionRight axis": "TeleportDirectionRight",
 			"/actions/main/in/MotionControllerThumbLeft_Y axis": "MotionControllerThumbLeft_Y",
 			"/actions/main/in/MotionControllerThumbLeft_X,MotionControllerThumbLeft_Y X Y_axis2d": "MotionControllerThumbLeft",
 			"/actions/main/in/MotionControllerThumbLeft_X axis": "MotionControllerThumbLeft_X",
@@ -561,8 +551,8 @@
 			"/actions/main/in/Forward_Back axis": "Forward_Back",
 			"/actions/main/in/Right_Left axis": "Right_Left",
 			"/actions/main/in/VREditor_Left_TriggerAxis axis": "VREditor_Left_TriggerAxis",
-			"/actions/main/in/VREditor_Left_WorldMovement axis": "VREditor_Left_WorldMovement",
 			"/actions/main/in/VREditor_Right_TriggerAxis axis": "VREditor_Right_TriggerAxis",
+			"/actions/main/in/VREditor_Left_WorldMovement axis": "VREditor_Left_WorldMovement",
 			"/actions/main": "Main Game Actions"
 		}
 	]
